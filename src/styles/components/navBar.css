@@ -1,0 +1,125 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+nav a {
+  text-decoration: none;
+  text-decoration-style: none;
+  text-underline-offset: 8px;
+  text-decoration-color: var(--white);
+  color: var(--dark);
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 8px;
+  text-decoration-color: var(--dark);
+  color: var(--dark);
+}
+
+.nav-list-container ul {
+  display: flex;
+  flex-direction: row;
+  padding: unset;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  width: 100px;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo-container {
+  width: fit-content;
+}
+
+.nav-contact {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 760px) {
+  .nav-list-container {
+    padding: 1vh 1vh 1vh 1vh;
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: -100vh;
+    transition: 1s;
+    width: 100%;
+  }
+
+  .qw {
+    background-color: aquamarine;
+    height: 100%;
+  }
+
+  .nav-list-container.is-active {
+    top: 0px;
+    height: 100vh;
+  }
+
+  .nav-list-container ul {
+    height: 100%;
+    flex-direction: column;
+    margin: auto auto;
+    justify-content: center;
+    align-items: center;
+    padding: unset;
+  }
+
+  .nav-list-container ul {
+    list-style: none;
+    display: flex;
+    gap: 90px;
+  }
+
+  .nav-burger-icon {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  .nav-burger-icon span {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: black;
+    margin: 0 3px;
+    position: relative;
+    margin: unset;
+    margin: 2.5px;
+    transition: 1s;
+    transform-origin: 19px 1px;
+  }
+
+  .nav-logo {
+    position: relative;
+    z-index: 10;
+  }
+
+  .nav-burger-icon.is-active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .nav-burger-icon.is-active span:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+}
