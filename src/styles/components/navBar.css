@@ -5,7 +5,7 @@ nav {
   height: 100%;
   text-align: center;
   text-transform: uppercase;
-  color: var(--dark);
+  color: var(--secondary);
 }
 
 nav a {
@@ -13,7 +13,7 @@ nav a {
   text-decoration-style: none;
   text-underline-offset: 8px;
   text-decoration-color: var(--white);
-  color: var(--dark);
+  color: var(--secondary);
 }
 
 nav a:hover {
@@ -49,9 +49,12 @@ nav a:hover {
   width: fit-content;
 }
 
-.nav-contact {
+.nav-contact a {
   display: flex;
   justify-content: flex-end;
+  padding-right: 10px;
+  z-index: 100;
+  cursor: pointer;
 }
 
 @media (max-width: 760px) {
@@ -66,14 +69,10 @@ nav a:hover {
     width: 100%;
   }
 
-  .qw {
-    background-color: aquamarine;
-    height: 100%;
-  }
-
   .nav-list-container.is-active {
     top: 0px;
     height: 100vh;
+    background-color: var(--primary);
   }
 
   .nav-list-container ul {
@@ -122,4 +121,31 @@ nav a:hover {
   .nav-burger-icon.is-active span:nth-child(2) {
     transform: rotate(-45deg);
   }
+
+  .page-hero-links {
+    height: 10vh;
+    position: absolute;
+    top: 0px;
+  }
+}
+
+.page-hero-links {
+  position: absolute;
+  display: flex;
+  width: 100vh;
+  padding: 0px 10vh;
+  top: 0;
+  left: 100vw;
+  bottom: 0;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  align-items: center;
+}
+
+.page-hero-links h5 {
+  transform: rotate(180deg);
+  padding: unset;
+  margin: unset;
+  width: 100%;
+  margin-bottom: 0px;
 }

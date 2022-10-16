@@ -2,10 +2,25 @@ import React from "react";
 import "../styles/home.css";
 import { NavigationBar } from "../components/navigation/navBar";
 import { PageHero } from "../components/pageComponents/pageHero";
+import { ReactIcon } from "../components/assets/icons/reactIcon";
+import { HTMLIcon } from "../components/assets/icons/htmlIcon";
+import { CssIcon } from "../components/assets/icons/cssIcon";
+import { TailwindIcon } from "../components/assets/icons/tailwindIcon";
+import { SwiftUIIcon } from "../components/assets/icons/swiftUIIcon";
+import { JavascriptIcon } from "../components/assets/icons/javascriptIcon";
+import { TypescriptIcon } from "../components/assets/icons/typescriptIcon";
+import { NodeIcon } from "../components/assets/icons/nodeIcon";
+import { DockerIcon } from "../components/assets/icons/dockerIcon";
+import { PostmanIcon } from "../components/assets/icons/postmanIcon";
+import { PHPIcon } from "../components/assets/icons/phpIcon";
+import { JestIcon } from "../components/assets/icons/jestIcon";
+import ReactTooltip from "react-tooltip";
+
 function Home() {
   return (
     <>
       <div className="container">
+        <ReactTooltip className="tooltip" backgroundColor="var(--secondary)" />
         <div className="page-header">
           <NavigationBar />
         </div>
@@ -14,52 +29,77 @@ function Home() {
             title="michael edes"
             subtitle="software engineer"
             textColor="var(--dark)"
-            backgroundColor="var(--grad)"
+            backgroundColor="var(--primary)"
+            isHome={true}
           />
           <div className="content-intro-container">
             <div className="content-intro">
               <div className="content-intro-title">
-                <h1>TECH STACK</h1>
-              </div>
-              <hr />
-              <div className="content-intro-tech-stack">
-                <div className="tech-stack-list">
-                  <div>FRONT END</div>
-                  <div>
-                    <ul>
-                      <li>HTML5</li>
-                      <li>CSS3</li>
-                      <li>CSS3</li>
-                      <li>CSS3</li>
-                      <li>CSS3</li>
-                    </ul>
-                  </div>
+                <div className="title-label">
+                  <span></span>
+                  <h5>TECH STACK</h5>
                 </div>
-                <div className="tech-stack-list">
-                  <div>BACK END</div>
-                  <div>
-                    <ul>
-                      <li>HTML5</li>
-                      <li>CSS3</li>
-                      <li>CSS3</li>
-                      <li>CSS3</li>
-                      <li>CSS3</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="tech-stack-list">
-                  <div>SOFTWARE END</div>
-                  <div>
-                    <ul>
-                      <li>HTML5</li>
-                      <li>CSS3</li>
-                      <li>CSS3</li>
-                      <li>CSS3</li>
-                      <li>CSS3</li>
-                    </ul>
-                  </div>
+                <div className="title-scroll">
+                  <h5>SCROLL</h5>
+                  <span></span>
                 </div>
               </div>
+              <div className="content-intro-sections">
+                <section>
+                  <h1>SKILLS AND TOOLS</h1>
+                  <div className="tech-stack-container">
+                    <div className="skills-container">
+                      <div className="t1-container">
+                        <div className="skillbox" data-tip={"REACT"}>
+                          <ReactIcon />
+                        </div>
+                      </div>
+                      <div className="t2-container">
+                        <div className="skillbox" data-tip={"HTML5"}>
+                          <HTMLIcon />
+                        </div>
+                        <div className="skillbox" data-tip={"CSS3"}>
+                          <CssIcon />
+                        </div>
+                      </div>
+                      <div className="t3-container">
+                        <div className="skillbox" data-tip={"JAVASCRIPT"}>
+                          <JavascriptIcon />
+                        </div>
+                        <div className="skillbox" data-tip={"SWIFT"}>
+                          <SwiftUIIcon />
+                        </div>
+                        <div className="skillbox" data-tip={"TAILWIND"}>
+                          <TailwindIcon />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="skills-container-second">
+                      <div className="t5-container">
+                        <div className="skillbox" data-tip={"TYPESCRIPT"}>
+                          <TypescriptIcon />
+                        </div>
+                        <div className="skillbox" data-tip={"PHP"}>
+                          <PHPIcon />
+                        </div>
+                        <div className="skillbox" data-tip={"NODE"}>
+                          <NodeIcon />
+                        </div>
+                        <div className="skillbox" data-tip={"DOCKER"}>
+                          <DockerIcon />
+                        </div>
+                        <div className="skillbox" data-tip={"POSTMAN"}>
+                          <PostmanIcon />
+                        </div>
+                        <div className="skillbox" data-tip={"JEST"}>
+                          <JestIcon />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div className="content-intro-tech-stack"></div>
             </div>
           </div>
         </div>

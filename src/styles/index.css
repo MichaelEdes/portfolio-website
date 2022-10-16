@@ -10,8 +10,8 @@ body {
   width: 100vw;
   height: 100%;
 
-  --primary: #ffe134;
-  --secondary: #f16775;
+  --primary: #fabb00;
+  --secondary: #ffffff;
   --accent: #fee36e;
   --button: #ceb92c;
   --base: #f7fa18 100%;
@@ -22,7 +22,7 @@ body {
   --yellow: #fba92c;
   --white: #ffffff;
 
-  --grad1: linear-gradient(
+  /* --grad1: linear-gradient(
     0deg,
     rgb(0, 187, 255) 0%,
     rgb(0, 147, 200) 29%,
@@ -32,11 +32,12 @@ body {
   --grad: linear-gradient(
     0deg,
     rgb(250, 245, 0) 0%,
-    rgb(255, 233, 36) 15%,
-    rgb(255, 201, 24) 35%,
+    rgb(255, 233, 36) 25%,
+    rgb(254, 212, 0) 31%,
+    rgb(254, 220, 0) 40%,
     rgb(247, 250, 24) 100%
   );
-  --grad3: linear-gradient(180deg, rgb(250, 245, 0) 0%);
+  --grad3: linear-gradient(180deg, rgb(250, 245, 0) 0%); */
 }
 
 code {

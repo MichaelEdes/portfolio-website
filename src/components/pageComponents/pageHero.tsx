@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+// import React, { ReactElement } from "react";
 import "../../styles/components/pageHero.css";
 
 type Props = {
@@ -6,6 +6,7 @@ type Props = {
   subtitle: string;
   backgroundColor: string;
   textColor: string;
+  isHome: boolean;
 };
 
 export function PageHero({
@@ -13,6 +14,7 @@ export function PageHero({
   subtitle,
   backgroundColor,
   textColor,
+  isHome,
 }: Props) {
   return (
     <div
@@ -21,7 +23,9 @@ export function PageHero({
     >
       <div className="page-hero" style={{ color: `${textColor}` }}>
         <h1>{title}</h1>
-        <h4>{subtitle}</h4>
+        <div className="subtitle-container">
+          <h4>{subtitle}</h4>
+        </div>
       </div>
     </div>
   );

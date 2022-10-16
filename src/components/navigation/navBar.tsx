@@ -1,6 +1,6 @@
 import "../../styles/components/navBar.css";
 
-import React, { useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import { Logo } from "../images/logo/logo";
 
 const inView = document.getElementById("burgerLine1");
@@ -24,6 +24,36 @@ export const NavigationBar = () => {
       );
   }, []);
 
+  const NavListItems = () => {
+    return (
+      <ul>
+        <li>
+          <a href="/">intro</a>
+        </li>
+        <li>
+          <a href="/">who</a>
+        </li>
+        <li>
+          <a href="/">what</a>
+        </li>
+        <li>
+          <a href="/">work</a>
+        </li>
+      </ul>
+    );
+  };
+
+  const SocialLinks = () => {
+    return (
+      <div className={`page-hero-links`}>
+        <h5>LinkedIn</h5>
+        <h5>GitHub</h5>
+        <h5>Twitter</h5>
+        <h5>Instagram</h5>
+      </div>
+    );
+  };
+
   return (
     <nav>
       <div className="nav-logo">
@@ -32,10 +62,13 @@ export const NavigationBar = () => {
       <div className={`nav-list-container ${isActive && "is-active"}`}>
         <div className="qw">
           <NavListItems />
+          <SocialLinks />
         </div>
       </div>
       {matches ? (
-        <div className="nav-contact">contact</div>
+        <div className="nav-contact">
+          <a href="../www.google.com">contact</a>
+        </div>
       ) : (
         <div
           className={`nav-burger-icon ${isActive && "is-active"}`}
@@ -45,25 +78,7 @@ export const NavigationBar = () => {
           <span></span>
         </div>
       )}
+      {matches && <SocialLinks />}
     </nav>
-  );
-};
-
-const NavListItems = () => {
-  return (
-    <ul>
-      <li>
-        <a href="/">intro</a>
-      </li>
-      <li>
-        <a href="/">who</a>
-      </li>
-      <li>
-        <a href="/">what</a>
-      </li>
-      <li>
-        <a href="/">work</a>
-      </li>
-    </ul>
   );
 };
